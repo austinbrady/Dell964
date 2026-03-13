@@ -8,12 +8,17 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PPD="${SCRIPT_DIR}/dell964.ppd"
 PRINTER_NAME="Dell_964"
+echo "Installing Dell 964 driver for Apple Silicon (M-Series)..."
 
-# 1. Check Gutenprint filter (macOS path)
-GUTENPRINT_FILTER="/usr/libexec/cups/filter/rastertogutenprint.5.3"
+# 1. Check Gutenprint filter (Apple Silicon: Homebrew path first, then fallback)
+GUTENPRINT_FILTER="/opt/homebrew/libexec/cups/filter/rastertogutenprint.5.3"
+if [[ ! -x "$GUTENPRINT_FILTER" ]]; then
+  GUTENPRINT_FILTER="/usr/libexec/cups/filter/rastertogutenprint.5.3"
+fi
 if [[ ! -x "$GUTENPRINT_FILTER" ]]; then
   echo "The Gutenprint driver was not found."
-  echo "Please install it first (e.g. search for \"Gutenprint for Mac\" or install via MacPorts: sudo port install gutenprint)."
+  echo "Please install it first. On Apple Silicon (M-Series) Macs: brew install --cask gutenprint"
+  echo "Or search for \"Gutenprint for Mac\" or install via MacPorts: sudo port install gutenprint."
   exit 1
 fi
 

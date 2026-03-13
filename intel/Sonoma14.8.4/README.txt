@@ -1,5 +1,6 @@
-Dell 964 Printer Installer — macOS 26.3.2 Tahoe
-==============================================
+For Intel Macs — Dell 964 Printer Installer (macOS 14.8.4 Sonoma)
+===================================================================
+(If you have an M-Series Mac, use a folder from mseries/ instead. See README.txt in the repo root.)
 
 You need Gutenprint installed first (one-time). Search for "Gutenprint for Mac" or install via MacPorts: sudo port install gutenprint. If the installer says the driver is missing, do this step and run the installer again.
 
