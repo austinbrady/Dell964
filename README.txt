@@ -1,0 +1,31 @@
+Dell 964 Printer Installer
+=========================
+
+Prerequisite (do this first, one-time)
+--------------------------------------
+You need Gutenprint installed on your Mac before using this installer. Search for "Gutenprint for Mac" or install via MacPorts: sudo port install gutenprint. If the installer says the driver is missing, do this step and run the installer again.
+
+Choose your macOS version
+-------------------------
+Open the folder that matches your Mac's version. You can check under Apple menu → About This Mac.
+
+  MacOS/Monterey12.7.6   — macOS 12.7.6 Monterey
+  MacOS/Ventura13.7.8    — macOS 13.7.8 Ventura
+  MacOS/Sonoma14.8.4     — macOS 14.8.4 Sonoma
+  MacOS/Sequoia15.7.4    — macOS 15.7.4 Sequoia
+  MacOS/Tahoe26.3.2      — macOS 26.3.2 Tahoe
+
+Steps (inside your version's folder)
+-------------------------------------
+1. Put that folder somewhere you can find it (e.g. Desktop or Applications).
+
+2. Connect the Dell 964 to your Mac with a USB cable and turn the printer on.
+
+3. Double-click "Install Dell 964 Printer.command". Your Mac may ask for your password; enter it so the printer can be added.
+
+4. When it says "Dell 964 is installed and ready," press Enter to close the window. You can now print from any app.
+
+If something goes wrong (e.g. "printer not found"), fix the issue (e.g. connect the printer or turn it on) and run the installer again.
+
+---
+This driver is provided as-is for personal use (e.g. home setup).
