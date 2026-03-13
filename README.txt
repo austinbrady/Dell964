@@ -1,41 +1,20 @@
 Dell 964 Printer Installer
 =========================
 
-Quick start (three steps)
--------------------------
-1. Choose your Mac type: Intel or Apple Silicon (M-Series). Don't know? Apple menu → About This Mac → look at "Chip": Apple M1/M2/M3 etc. = M-Series; Intel = Intel.
-2. Choose your macOS version (same window: e.g. "macOS 14.x Sonoma").
-3. Open the matching folder below (intel or mseries, then your version). Double-click "Install Dell 964 Printer.command" and follow the prompts.
+Prerequisite: Install Gutenprint (if you don't have it)
+-------------------------------------------------------
+You must have Gutenprint installed before running the installer. If the installer says the driver is missing, install Gutenprint and run it again.
 
-Directory layout (pick one folder)
----------------------------------
-  intel/
-    Monterey12.7.6   — macOS 12 Monterey
-    Ventura13.7.8    — macOS 13 Ventura
-    Sonoma14.8.4     — macOS 14 Sonoma
-    Sequoia15.7.4    — macOS 15 Sequoia
-    Tahoe26.3.2      — macOS 26 Tahoe
+  • Apple Silicon (M-Series) Macs:  brew install --cask gutenprint
+  • Intel / other:  Search "Gutenprint for Mac" or use MacPorts:  sudo port install gutenprint
 
-  mseries/
-    Monterey12.7.6   — macOS 12 Monterey (Apple Silicon)
-    Ventura13.7.8    — macOS 13 Ventura (Apple Silicon)
-    Sonoma14.8.4     — macOS 14 Sonoma (Apple Silicon)
-    Sequoia15.7.4    — macOS 15 Sequoia (Apple Silicon)
-    Tahoe26.3.2      — macOS 26 Tahoe (Apple Silicon)
-
-Prerequisite (one-time)
-----------------------
-Install Gutenprint before running the installer. If the installer says the driver is missing, do this and run it again.
-
-  • Apple Silicon (M-Series):  brew install --cask gutenprint
-  • Intel / other:            Search "Gutenprint for Mac" or MacPorts:  sudo port install gutenprint
-
-Steps (inside your chosen folder)
----------------------------------
-1. Put that folder somewhere easy to find (e.g. Desktop or Applications).
-2. Connect the Dell 964 via USB and turn the printer on.
-3. Double-click "Install Dell 964 Printer.command". Enter your password when asked.
-4. When you see "Dell 964 is installed and ready," press Enter to close the window. You can print from any app.
+Quick steps
+-----------
+1. Find your Mac type and macOS version: Apple menu → About This Mac. Note "Chip" (Intel or Apple M1/M2/M3…) and the macOS version (e.g. Sonoma 14.x).
+2. Open the matching folder: intel/ or mseries/, then the folder for your macOS version (e.g. Sonoma14.8.4).
+3. Connect the Dell 964 via USB and turn the printer on.
+4. Double-click "Install Dell 964 Printer.command". Enter your password when asked.
+5. When you see "Dell 964 is installed and ready," press Enter to close. You can print from any app.
 
 Troubleshooting
 ---------------

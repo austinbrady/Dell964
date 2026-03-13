@@ -1,0 +1,57 @@
+Dell 964 Printer Installer — Team runbook (Phase 1)
+===================================================
+Run the full process on every Mac/OS combination below. Document each run so the README can be updated. Do not miss a single step.
+
+Configurations (10 total)
+-------------------------
+ 1. Intel       + Monterey 12.7.6   → intel/Monterey12.7.6
+ 2. Intel       + Ventura 13.7.8   → intel/Ventura13.7.8
+ 3. Intel       + Sonoma 14.8.4    → intel/Sonoma14.8.4
+ 4. Intel       + Sequoia 15.7.4   → intel/Sequoia15.7.4
+ 5. Intel       + Tahoe 26.3.2     → intel/Tahoe26.3.2
+ 6. M-Series    + Monterey 12.7.6   → mseries/Monterey12.7.6
+ 7. M-Series    + Ventura 13.7.8   → mseries/Ventura13.7.8
+ 8. M-Series    + Sonoma 14.8.4    → mseries/Sonoma14.8.4
+ 9. M-Series    + Sequoia 15.7.4   → mseries/Sequoia15.7.4
+10. M-Series    + Tahoe 26.3.2     → mseries/Tahoe26.3.2
+
+Steps (repeat for each configuration)
+--------------------------------------
+1. Confirm environment
+   • Apple menu → About This Mac: note Chip (Intel vs M1/M2/M3…) and macOS version.
+   • Ensure this run matches one of the 10 configurations above.
+
+2. Install Gutenprint (if not already installed)
+   • Apple Silicon (M-Series):  brew install --cask gutenprint
+   • Intel / other:  "Gutenprint for Mac" or MacPorts:  sudo port install gutenprint
+   • If already installed, skip and note it. If install fails or path differs, document exactly.
+
+3. Prepare installer
+   • Open the folder for this configuration (e.g. intel/Sonoma14.8.4 or mseries/Tahoe26.3.2).
+   • Confirm folder contains: Install Dell 964 Printer.command, install_driver.sh, dell964.ppd.
+
+4. Connect printer
+   • Connect Dell 964 via USB. Turn printer on. Wait until ready.
+
+5. Run the installer
+   • Double-click "Install Dell 964 Printer.command".
+   • Enter Mac password when prompted.
+   • Wait for "Dell 964 is installed and ready." Press Enter to close.
+   • If error (e.g. "Gutenprint driver not found", "Printer not found"), document it, fix, and run again.
+
+6. Print test page (macOS)
+   • System Settings (or System Preferences) → Printers & Scanners (or Print & Scan).
+   • Select Dell_964 → Options & Supplies (or Open Print Queue) → Print Test Page.
+   • Print one test page. Note any menu name differences by macOS version.
+
+7. Print tutorial instruction from the printer
+   • If Dell 964 has a control-panel or menu option to print a tutorial, demo, or self-test page, run it and print.
+   • If no such option, document "No printer-side tutorial/demo option" for this model.
+
+8. Document this configuration
+   • Note: processor, macOS version, any deviation (Gutenprint path, dialog text, menu names).
+   • Note: whether "tutorial instruction" was done from printer menu or only via macOS test page.
+
+Deliverable
+-----------
+A runbook log (e.g. spreadsheet or doc) for all 10 configurations: steps completed, any errors, and whether "tutorial from printer" was available. Use this to finalize README.txt.
